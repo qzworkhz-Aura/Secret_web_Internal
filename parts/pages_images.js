@@ -1,7 +1,7 @@
 /* Pages untuk mangaid12_part1_s1 sampai s4 */
 export const pages_part1 = [
     {
-        src:"/images/mangaid12_part1-s1.jpg",
+        src:"/images12/mangaid12_part1-s1.jpg",
         dialog:[
             "'Eh, pakai lubang ini?'",
             "Cewek itu terdiam melihat toilet yang terlalu sederhana.",
@@ -20,7 +20,7 @@ export const pages_part1 = [
         ]
     },
     { 
-        src:"/images/mangaid12_part1-s2.jpg",
+        src:"/images12/mangaid12_part1-s2.jpg",
         dialog: [
             "'Dari tadi di dalam bus aku nahan terus, jadi pipis pertama hari ini warnanya kuning pekat'.Close-up pantatnya sambil pipis",
             "'Haa… di bilik gelap dan sunyi sendirian, aku tarik napas, lalu terasa ada tekanan di anus'",
@@ -33,7 +33,7 @@ export const pages_part1 = [
         ]
     },
     {
-        src:"/images/mangaid12_part1-s3.jpg",
+        src:"/images12/mangaid12_part1-s3.jpg",
         dialog: [
             "'Aku mau berak, tapi di toilet seadanya begini, kotorannya bakalan kelihatan jelas sama orang yang pakai setelahku'",
             "'Aah malu banget! Orang berikutnya bakalan liat taiku! Bakalan cium baunya!'",
@@ -44,7 +44,7 @@ export const pages_part1 = [
         ]
     },
     {
-        src:"/images/mangaid12_part1-s4.jpg",
+        src:"/images12/mangaid12_part1-s4.jpg",
         dialog: [
             "'Kayaknya banyak serat, jadi tai-nya nggak putus dan masih nyangkut di anus pakai serat-serat tipis.'",
             "'Toilet di rumah yang ada bidet biasanya ngilangin bau. Bau tai yang langsung ngena di hidung begini, meski milikku sendiri, rasanya sudah lama nggak kecium.'",
@@ -64,7 +64,7 @@ export const pages_part1 = [
 /* Pages untuk mangaid12_part2-s1 sampai s4 */
 export const pages_part2 = [
     {
-        src:"/images/mangaid12_part2-s1.jpg",
+        src:"/images12/mangaid12_part2-s1.jpg",
         dialog: [
             "'Aah… jelek banget… Aku sampai lihat tai-nya. Lagian, jangan sampai ke tempat sejauh ini cuma buat berak dong!'",
             "Begitu membuka pintu toilet, cewe itu langsung melihat tai orang lain yang masih menggelinding di dalam lubang. Dia langsung jijik",
@@ -79,7 +79,7 @@ export const pages_part2 = [
         ] 
     },
     {
-        src:"/images/mangaid12_part2-s2.jpg",
+        src:"/images12/mangaid12_part2-s2.jpg",
         dialog: [
             "'Air kencing membasahi papan yang diletakkan di kakiku, membuat kekacauan yang menjijikan'",
             "'Aku berjongkok untuk menghindari melihat ke dalam lubang yang menjijikkan itu, sehingga air kencing itu langsung tumpah dan membasahi tanah, membentuk genanangan yang kotor'"
@@ -93,7 +93,7 @@ export const pages_part2 = [
         ]
     },
     {
-        src:"/images/mangaid12_part2-s3.jpg",
+        src:"/images12/mangaid12_part2-s3.jpg",
         dialog: [
             "'Whoosh!', Tanpa sadar aku mengeluarkan suara saat mengejan. Buang air besarku biasanya tidak lancar, jadi aku ingin mengeluarkannya semuannya selagi bisa"
         ],
@@ -105,7 +105,7 @@ export const pages_part2 = [
         ]
     },
     {
-        src:"/images/mangaid12_part2-s4.jpg",
+        src:"/images12/mangaid12_part2-s4.jpg",
         dialog: [
             "'Aku merasa sangat tidak nyaman. Itu perasaan yang wajar mengingat kita berada di toilet yang kotor dan kumuh, tapi bukan itu saja.'",
             "'Rasanya seperti ada seseorang yang mengawasi saya dari jarak sangat dekat. Aku tak bisa menahan perasaan seperti ini..'"
@@ -118,7 +118,7 @@ export const pages_part2 = [
 /** Pages untuk mangaid12_part3-s1 sampai s2 */
 export const pages_part3 = [
     {
-        src:"/images/mangaid12_part3-s1.jpg",
+        src:"/images12/mangaid12_part3-s1.jpg",
         dialog: [
             "'Fyuuh..'"
         ],
@@ -130,7 +130,7 @@ export const pages_part3 = [
         ]
     },
     {
-        src:"/images/mangaid12_part3-s2.jpg",
+        src:"/images12/mangaid12_part3-s2.jpg",
         dialog: [
             "'Aku merasa suara air kencing yang jatuh ke dalam lubang itu telah berubah, berubah menjadi suara gemericik seperti air yang dituangkan ke dalam cangkir kecil, dan entah kenapa suara itu terdengar lebih dekat'",
             "Aku merasa seperti ada yang mengikuti sepanjang perjalanan pulang dari bus yang mogok, dan itu, masih disini, tepat di sini meminum air kencingku, dan sekarang ia menunggu dengan mulut terbuka, mengeluarkan air liur, siap memakan kotoranku"
@@ -147,7 +147,7 @@ export const pages_part3 = [
 /** Pages untuk part 4 + ending */
 export const pages_ending = [
     {
-        src:"/images/mangaid12_part4-s1.jpg",
+        src:"/images12/mangaid12_part4-s1.jpg",
         dialog: [
             "'Hah-ha!!!...'"
         ],
@@ -159,7 +159,7 @@ export const pages_ending = [
         ]
     },
     {
-        src:"/images/mangaid12_ending.jpg",
+        src:"/images12/mangaid12_ending.jpg",
         dialog: [
             "'Dasar bajingan! Kau mengintip ke dalam toilet kan! Dasar mesum!'",
             "'Mati! Kau Menjijikkan!'",

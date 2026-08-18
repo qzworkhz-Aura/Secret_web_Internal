@@ -2,11 +2,14 @@
 
 :root {
     --color-carbon: #171717;
+    --color-surface: #1f1f1f;
+    --color-border: #2a2a2a;
     --color-text: #e6e6e6;
     --color-text-muted: #a8a8a8;
     --color-link: #2f9dff;
     --color-link-hover: #6cbcff;
-    --max-width: 700px;
+    --radius: 14px;
+    --card-gap: 24px;
 }
 
 * {
@@ -23,15 +26,30 @@ body {
     min-height: 100vh;
 }
 
+/* ============================
+    MOBILE FIRST: peek carousel
+   ============================ */
 main {
     display: flex;
-    justify-content: center;
-    padding: 40px 20px;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    gap: var(--card-gap);
+    padding: 32px 12vw; /* side padding lets next/prev cards peek in */
+    scrollbar-width: none;
 }
 
-.splash-manga-id-12 {
-    width: 100%;
-    max-width: var(--max-width);
+main::-webkit-scrollbar {
+    display: none;
+}
+
+.splash-manga-id {
+    flex: 0 0 76vw;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .splash-manga {
@@ -39,36 +57,40 @@ main {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: #1f1f1f;
-    border: 1px solid #2a2a2a;
-    border-radius: 12px;
-    padding: 32px 24px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 24px 20px;
+    height: 100%;
 }
 
 .splash-manga img {
     display: block;
-    margin: 0 auto 24px auto;
-    border-radius: 8px;
-    max-width: 100%;
+    margin: 0 auto 20px auto;
+    width: 100%;
+    max-width: 260px;
     height: auto;
+    border-radius: 8px;
     object-fit: cover;
 }
 
 .splash-manga h4 {
     font-weight: 500;
-    font-size: 1.05rem;
-    margin-bottom: 16px;
+    font-size: 1rem;
+    margin-bottom: 14px;
 }
 
 .splash-manga p {
     font-weight: 300;
-    font-size: 0.95rem;
+    font-size: 0.88rem;
     color: var(--color-text-muted);
     margin-bottom: 12px;
+    text-align: left;
+    width: 100%;
 }
 
-.splash-manga p:last-child {
-    margin-bottom: 0;
+.splash-manga p:last-of-type {
+    text-align: center;
 }
 
 a {
@@ -87,4 +109,30 @@ a:focus-visible {
 a:focus-visible {
     outline: 2px solid var(--color-link);
     outline-offset: 2px;
+}
+
+/* ============================
+    DESKTOP: 2-column grid
+   ============================ */
+@media (min-width: 900px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 1fr;
+        gap: var(--card-gap);
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 48px 24px;
+        overflow: visible;
+        scroll-snap-type: none;
+    }
+
+    .splash-manga-id {
+        flex: initial;
+        scroll-snap-align: none;
+    }
+
+    .splash-manga img {
+        max-width: 300px;
+    }
 }
