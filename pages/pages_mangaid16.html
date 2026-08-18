@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#171717">
+    <title>Manga 16</title>
+    <link rel="icon" type="image/png" href="/icon.png">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="/css/mangapage.css">
+</head>
+<body>
+    <main>
+        <section class="manga-container">
+            <div id="image-container" class="panel-manga">
+                <img id="comic-page" src="/images16/mangaid16_part1-s1.jpg" alt="Seorang gadis mengeluh dengan toilet yang kecil" width="350px" height="500px">
+                </div>
+                <div class="description-row">
+                    <div class="description-manga-container-dialogue">
+                    <p id="dialog-text">Penjelasan setiap dialog</p>
+                </div>
+                <div class="description-manga-container-meaning">
+                    <p id="meaning-text">Penjelsan arti/maksud panel manga</p>
+                </div>
+                </div>
+                <div id="navigation">
+                    <button onclick="prevpage()">Previous</button>
+                    <span id="page-num">1</span>
+                    <button onclick="nextpage()">Next</button>
+                    <br>
+                <a href="/home.html">Balik ke Halaman Utama</a>
+            </div>
+        </section>
+    </main>
+    <script type="module">
+        import { pages_mangaid16_part1, pages_mangaid16_part2, pages_mangaid16_part3 } from "/parts/pages_images_mangaid16.js";
+        import { initNavigation } from "/navigation.js";
+        
+        // Gabungkan (concat) kedua array agar part 2 nyambung setelah part 1
+        const gabunganPages = pages_mangaid16_part1.concat(pages_mangaid16_part2, pages_mangaid16_part3);
+        
+        initNavigation(gabunganPages);
+    </script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js');
+        }
+    </script>
+</body>
+</html>
