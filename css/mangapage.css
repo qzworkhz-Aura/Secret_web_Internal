@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --color-carbon: #171717;
+    --color-surface: #1f1f1f;
+    --color-border: #2a2a2a;
+    --color-text: #e6e6e6;
+    --color-text-muted: #a8a8a8;
+    --color-candy-blue: #B2D5E5;
+    --color-candy-blue-hover: #c8e2ee;
+    --color-link: #2f9dff;
+    --color-link-hover: #6cbcff;
+    --radius: 10px;
+    --content-width: min(92vw, 900px);
+    --breakpoint-desktop: 768px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-carbon);
+    color: var(--color-text);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: clamp(20px, 5vw, 48px) 16px;
+}
+
+/* Main layout: flex column by default (mobile-first), row-capable on desktop */
+.manga-container {
+    width: 100%;
+    max-width: var(--content-width);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Image panel */
+.panel-manga {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.panel-manga img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: var(--radius);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ===========================================
+   Dialogue + Meaning boxes
+   Wrap these two divs in the HTML like this:
+   <div class="description-row">
+       <div class="description-manga-container-dialogue">...</div>
+       <div class="description-manga-container-meaning">...</div>
+   </div>
+   =========================================== */
+.description-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    border-radius: var(--radius);
+    scrollbar-width: none; /* firefox */
+}
+
+.description-row::-webkit-scrollbar {
+    display: none; /* chrome/safari */
+}
+
+.description-manga-container-dialogue,
+.description-manga-container-meaning {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.description-manga-container-dialogue {
+    border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.description-manga-container-meaning {
+    border-radius: 0 var(--radius) var(--radius) 0;
+    border-left: none;
+}
+
+.description-manga-container-dialogue p,
+.description-manga-container-meaning p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--color-text-muted);
+}
+
+#dialog-text {
+    color: var(--color-text);
+    font-weight: 400;
+}
+
+/* Small hint that mobile users can swipe between the two boxes */
+.description-row::after {
+    content: "";
+}
+
+/* Desktop: split view side by side, no scrolling needed */
+@media (min-width: 768px) {
+    .description-row {
+        overflow-x: visible;
+        scroll-snap-type: none;
+    }
+
+    .description-manga-container-dialogue,
+    .description-manga-container-meaning {
+        flex: 1 1 50%;
+    }
+}
+
+/* Navigation */
+#navigation {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    text-align: center;
+}
+
+#navigation button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-carbon);
+    background-color: var(--color-candy-blue);
+    border: none;
+    border-radius: 999px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+#navigation button:hover {
+    background-color: var(--color-candy-blue-hover);
+    transform: translateY(-1px);
+}
+
+#navigation button:active {
+    transform: translateY(0);
+}
+
+#navigation button:focus-visible {
+    outline: 2px solid var(--color-candy-blue);
+    outline-offset: 3px;
+}
+
+#navigation button:first-of-type::before {
+    content: "<";
+}
+
+#navigation button:last-of-type::after {
+    content: ">";
+}
+
+#page-num {
+    font-weight: 600;
+    font-size: 0.95rem;
+    min-width: 24px;
+}
+
+#navigation br {
+    display: none;
+}
+
+#navigation a {
+    width: 100%;
+    text-align: center;
+    color: var(--color-link);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 6px;
+    transition: color 0.2s ease;
+}
+
+#navigation a:hover,
+#navigation a:focus-visible {
+    color: var(--color-link-hover);
+    text-decoration: underline;
+}
+
+/* Desktop: allow the whole page to breathe a bit more */
+@media (min-width: 768px) {
+    .manga-container {
+        gap: 28px;
+    }
+}

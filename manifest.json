@@ -1,0 +1,11 @@
+{
+  "name": "Webf Manga Reader",
+  "short_name": "Webf",
+  "description": "Private Manga Reader Web Application",
+  "start_url": "/password_pages.html",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#171717",
+  "theme_color": "#171717",
+  "icons": []
+}

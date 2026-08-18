@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --color-carbon: #171717;
+    --color-text: #e6e6e6;
+    --color-text-muted: #a8a8a8;
+    --color-link: #2f9dff;
+    --color-link-hover: #6cbcff;
+    --max-width: 700px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-carbon);
+    color: var(--color-text);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.splash-manga-id-12 {
+    width: 100%;
+    max-width: var(--max-width);
+}
+
+.splash-manga {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #1f1f1f;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 32px 24px;
+}
+
+.splash-manga img {
+    display: block;
+    margin: 0 auto 24px auto;
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.splash-manga h4 {
+    font-weight: 500;
+    font-size: 1.05rem;
+    margin-bottom: 16px;
+}
+
+.splash-manga p {
+    font-weight: 300;
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    margin-bottom: 12px;
+}
+
+.splash-manga p:last-child {
+    margin-bottom: 0;
+}
+
+a {
+    color: var(--color-link);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+a:hover,
+a:focus-visible {
+    color: var(--color-link-hover);
+    text-decoration: underline;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--color-link);
+    outline-offset: 2px;
+}
